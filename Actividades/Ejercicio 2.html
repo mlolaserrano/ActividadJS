@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Actividad 2 JavaScript</title>
+    </head>
+
+    <body>
+        <script>
+        function encontrarMayor(array) {
+  var mayor = array[0];
+  for (var i = 1; i < array.length; i++) {
+    if (array[i] > mayor) {
+      mayor = array[i];
+    }
+  }
+  return mayor;
+}
+
+// Ejemplo de uso
+var numeros = [5, 9, 3, 2, 11, 7];
+var mayor = encontrarMayor(numeros);
+console.log("El número mayor en el array es: " + mayor);
+        </script>
+    </body>
+</html>
