@@ -6,20 +6,27 @@
 
     <body>
         <script>
-        function encontrarMayor(array) {
-  var mayor = array[0];
-  for (var i = 1; i < array.length; i++) {
-    if (array[i] > mayor) {
-      mayor = array[i];
-    }
-  }
-  return mayor;
-}
+        // Solicitar cuantos numeros quiere comparar
+        const cuantos = parseInt(prompt('Ingrese la cantidad de números que quiere diferenciar:', ''));
 
-// Ejemplo de uso
-var numeros = [5, 9, 3, 2, 11, 7];
-var mayor = encontrarMayor(numeros);
-console.log("El número mayor en el array es: " + mayor);
-        </script>
+        let numeros = []; // Array vacío para almacenar los números
+
+        // Solicitar al usuario que ingrese los números
+        for (let x = 1; x <= cuantos; x++) {
+            const valor = parseInt(prompt(`Ingrese el valor ${x} de ${cuantos}:`, ''));
+            numeros.push(valor); // Agregar el número al array
+        }
+
+        let mayor = numeros[0]; 
+
+        // Recorrer el array utilizando un bucle for
+        for (let i = 1; i < numeros.length; i++) {
+            if (numeros[i] > mayor) {
+                mayor = numeros[i]; // Actualizar el valor del mayor si se encuentra un número mayor
+            }
+        }
+
+        document.write(`El número mayor es: ${mayor}`);
+    </script>
     </body>
 </html>
